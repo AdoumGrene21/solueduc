@@ -1,0 +1,33 @@
+{% extends 'partials/base.html' %}
+
+		{%block title %} Les formations {%endblock%}
+
+		{% block content %}
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12">
+						<br/>
+					</div>
+				</div>
+	
+				
+		
+
+				<div class="row">
+
+
+{% for type  in  types %}
+						<div class="card" style="width: 18rem;">
+							
+							<div class="card-body">
+							  
+						
+							  <a href="{{type.id}}" class="btn btn-primary"><h5 class="card-title">{{type.libelle}}</h5></a>
+							</div>
+						  </div> 
+					{% endfor %}
+
+
+        </div>
+      </div>
+    {%endblock%}

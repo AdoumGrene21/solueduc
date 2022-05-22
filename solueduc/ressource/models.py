@@ -14,17 +14,25 @@ class Salle(models.Model):
     def __str__(self):
         return self.libelle
 
+
+class Type(models.Model):
+    libelle = models.CharField('Nom Cours', max_length=120)
+    description = models.CharField(max_length=200, blank=True)
+    
+    def __str__(self):
+        return self.libelle
+   
+
 class Cours(models.Model):
     libelle = models.CharField('Nom Cours', max_length=120)
     description = models.CharField(max_length=200, blank=True)
-    vid = models.FileField(upload_to="video/")
+    vid = models.FileField(upload_to="video/", null=True)
+    type = models.ForeignKey(Type, blank=False, null=True, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.libelle
 
     
-  
-
 class Enseignant(models.Model):
     nom = models.CharField('nom', max_length=120)
     prenoms = models.CharField('prenom', max_length=20)

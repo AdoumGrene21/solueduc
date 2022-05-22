@@ -5,6 +5,7 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
   <title>{% block title %}{% endblock title %}</title>
   <link rel="stylesheet" href="style.css">
   <!-- Bootstrap CSS -->
@@ -15,14 +16,16 @@
 </head>
 
 <body>
-  <header style="background-color: #6699cc; padding: 20px; color: black;">
+  <header style="background-color: #6699cc;  color: black;">
     <div style="display:flex; justify-content:space-between; align-items: center;">
-      <a href="#" style="padding-left: 10px; "><img src="LOG FIN.png" alt=""></a>
+      <a href="#" style="padding-left: 10px; ">
+        {% load static %}
+        <img src="{% static 'ressource/logo.png' %}" alt="" width="100px" height="90px" ></a>
       <div class="nav justify-content-center">
         <input class="form-control me-4" style="width: 220px;" type="search" placeholder="Recherchcer un Etudiant"
           name="query" aria-label="Recherhcer">
         <button class="btn btn-outline-primary " style=" color: #0f0f0f;"  type="submit">Recherhcer</button>
-        <a href="#" style="padding-left: 90px; padding-top: 7px; color: #0f0f0f;">bibliotheque numerique</a>
+        
       </div>
       <div class="nav justify-content-end">
       <button class="btn btn-outline-primary" style="margin-inline-end: 10px; color: #0f0f0f;" type="submit">Se connecter</button>
@@ -32,7 +35,9 @@
   </header>
   {% include  'partials/nav.html'%}
 
-  {% block content %} {%endblock%}
+  {% block content %}
+    
+  {%endblock%}
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
   </script>

@@ -15,20 +15,14 @@
 
 				<div class="row">
 					{% for cour  in  cours %}
-					<div class="col-sm-6">
-
 						<div class="card" style="width: 18rem;">
-							<img class="card-img-top" src="..." alt="Card image cap">
+							<img class="card-img-top" src="https://www.google.com/search?q=geographie&tbm=isch&source=iu&ictx=1&vet=1&fir=R05gFUhaTxAhEM%252CSN56rk-Bm0nnuM%252C%252Fm%252F034ns%253BpAbmROZphREgOM%252CCLAVFx8V03XQxM%252C_%253BZ0u9SnAyIb-KjM%252Cu0c8OC3cJZSONM%252C_%253Bsx-6oQOEIv0pxM%252C6SzHzTWUbSJ3VM%252C_%253B2aEeCLCAxjGwGM%252CIOCH6OUubd8u-M%252C_&usg=AI4_-kTT-oxhPU8gWKwspl83fgox9uqxnA&sa=X&ved=2ahUKEwjsgfLZn_P3AhUnhv0HHZFtBG0Q_B16BAhbEAE#imgrc=R05gFUhaTxAhEM" alt="Card image cap">
 							<div class="card-body">
 							  <h5 class="card-title">{{cour.libelle}}</h5>
 							  <p class="card-text">{{cour.description}}</p>
 							  <a href="{% url 'dashboard-cour' cour.id %}" class="btn btn-primary">Go somewhere</a>
 							</div>
 						  </div> 
-
-					  
-					 
-					</div>
 					{% endfor %}
 					
 				  </div>

@@ -4,30 +4,64 @@
 
 		{% block content %}
 			<div class="container">
-				<div class="row">
-					<div class="col-sm-12">
-						Orientions
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-6">
-					  <div class="card">
-						<div class="card-body">
-						  <h5 class="card-title">Special title treatment</h5>
-						  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						  <a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
+				<h1> Orientations </h1>
+				<form>
+					<div class="form-row">
+					  <div class="form-group col-md-6">
+						<label for="nom">Nom</label>
+						<input type="text" class="form-control" id="inputNom" placeholder="Nom">
+					  </div>
+					  <div class="form-group col-md-6">
+						<label for="prenom">Prenom</label>
+						<input type="text" class="form-control" id="inputPrenom" placeholder="Prenom">
 					  </div>
 					</div>
-					<div class="col-sm-6">
-					  <div class="card">
-						<div class="card-body">
-						  <h5 class="card-title">Special title treatment</h5>
-						  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						  <a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					  </div>
+
+					<div class="form-group">
+					  <label for="inputAge">Age</label>
+					  <input type="number" class="form-control" id="inputAge" placeholder="Age">
 					</div>
-				  </div>
+					<div class="form-row">
+						<div class="form-group col-md-6">
+						  <label for="inputCity">Pays</label>
+						  <input type="text" class="form-control" id="inputCity">
+						</div>
+						<div class="form-group col-md-4">
+						  <label for="inputInteret">Centre d'interet</label>
+						  <select id="inputInteret" class="form-control">
+							<option selected>Choisir...</option>
+							<option>Entrepreunariat</option>
+							<option>Sport</option>
+							<option>Informatique</option>
+							<option>Aviation</option>
+							<option>Medecine</option>
+							<option>Journalisme</option>
+							<option>Compatabilité</option>
+							<option>Droit</option>
+  
+						  </select>
+						</div>
+						<div class="form-group col-md-4">
+							<label for="inputBac">Serie du BAC</label>
+							<select id="inputBac" class="form-control">
+							  <option selected>Choisir...</option>
+							  <option>Serie A</option>
+							  <option>Serie D</option>
+							  <option>Serie C</option>
+							  <option>Serie E</option>
+							  <option>Serie F</option>
+							  <option>Serie E</option>
+							  <option>Serie G1</option>
+							  <option>Serie G2</option>
+			
+	
+							</select>
+						  </div>
+					  </div>
+					
+					
+					
+					<button type="submit" class="btn btn-primary">SOUMETTRE</button>
+				  </form>
 			</div>
 		{%endblock%}

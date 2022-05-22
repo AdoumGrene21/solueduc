@@ -8,4 +8,5 @@ urlpatterns = [
             path('forums', views.forums, name='dashboard-forums'),
             path('activites', views.activites, name='dashboard-activites'),
             path('view_cours/<cour_id>', views.views_formation, name='dashboard-cour'),
+            path('types-formations', views.views_type, name='dashboard-type'),
 		]

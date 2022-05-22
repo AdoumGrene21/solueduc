@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Cours
+from .models import Cours, Type
 from django.views import generic
 
 
@@ -17,6 +17,14 @@ def views_formation(request, cour_id):
 	return render(request, 'dashboard/view_formation.html', {
 		'cour': cour,
 	})
+
+
+def views_type(request):
+	types = Type.objects.all()
+	return render(request, 'dashboard/type.html', {
+		'types': types,
+	})
+
     
     
 
