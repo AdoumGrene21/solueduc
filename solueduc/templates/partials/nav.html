@@ -1,11 +1,21 @@
-<nav class="navbar navbar-dark bg-dark">
+<nav class="navbar navbar-dark bg-dark text-light">
     <div class="container">
         <ul class="nav">
             <li class="nav-item">
               <a class="nav-link" href="{% url 'dashboard-index' %}">Home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{% url 'dashboard-formations' %}">Formations</a>
+            <li class="nav-item"> 
+                <div class="dropdown">
+                  <a class="nav-link dropdown-toggle" href="{% url 'dashboard-formations' %}" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    Formations
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Elementaire</a></li>
+                    <li><a class="dropdown-item" href="#">Premier Cycle</a></li>
+                    <li><a class="dropdown-item" href="#">Seconde Cycle</a></li>
+            </ul>
+                </div>
+ 
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{% url 'dashboard-orientions' %}" >Orientations</a>
@@ -17,16 +27,6 @@
               <a class="nav-link " href="{% url 'dashboard-activites' %}">Activités</a>
             </li>
         </ul>
-        <div class="dropdown">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown link
-            </a>
-          
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div>
+       
     </div>
 </nav>
