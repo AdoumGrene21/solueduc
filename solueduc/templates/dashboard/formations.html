@@ -6,28 +6,33 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-12">
-						Les differentes formations
+						<br/>
 					</div>
 				</div>
+	
+				
+		
+
 				<div class="row">
+					{% for cour  in  cours %}
 					<div class="col-sm-6">
-					  <div class="card">
-						<div class="card-body">
-						  <h5 class="card-title">Special title treatment</h5>
-						  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						  <a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					  </div>
+
+						<div class="card" style="width: 18rem;">
+							<img class="card-img-top" src="..." alt="Card image cap">
+							<div class="card-body">
+							  <h5 class="card-title">{{cour.libelle}}</h5>
+							  <p class="card-text">{{cour.description}}</p>
+							  <a href="{% url 'dashboard-cour' cour.id %}" class="btn btn-primary">Go somewhere</a>
+							</div>
+						  </div> 
+
+					  
+					  <video controls="controls" width="500" height="500">
+						<source src="{{cour.vid.url}}" type="video/mp4">
+					  </video>
 					</div>
-					<div class="col-sm-6">
-					  <div class="card">
-						<div class="card-body">
-						  <h5 class="card-title">Special title treatment</h5>
-						  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-						  <a href="#" class="btn btn-primary">Go somewhere</a>
-						</div>
-					  </div>
-					</div>
+					{% endfor %}
+					
 				  </div>
 			</div>
 		{%endblock%}
