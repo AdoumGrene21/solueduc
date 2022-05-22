@@ -14,11 +14,9 @@
   <body>
     <header>
       <div style="background-color: rgb(120, 139, 133);">
+  
         <div>
-          <a href="#"><i class="bi bi-apple"></i></a>
-        </div>
-        <div>
-          <form class="d-flex text-light center" method="get" action="#">
+          <form class="d-flex text-light display: flex justify-content: center" method="get" action="#">
             {% csrf_token %}
           <input class="form-control col-4" type="search" placeholder="Recherhcer un Etudiant" name="query" aria-label="Recherhcer">
           <button class="btn btn-outline-primary" type="submit">Recherhcer</button>
