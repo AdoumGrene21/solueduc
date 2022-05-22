@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect
+from .models import Cours
+from django.views import generic
 
 
 def index(request):
@@ -6,8 +8,21 @@ def index(request):
     return render(request, 'dashboard/index.html')
 
 def formations(request):
+    cours = Cours.objects.all().order_by('libelle')
+    return render(request, 'dashboard/formations.html', {"cours":cours})
+
+
+def views_formation(request, cour_id):
+	cour = Cours.objects.get(pk=cour_id)
+	return render(request, 'dashboard/view_formation.html', {
+		'cour': cour,
+	})
     
-    return render(request, 'dashboard/formations.html')
+    
+
+##def mere_list(request):
+#	meres = Mere.objects.all().order_by('nom')
+#	return render(request, 'naissances/mere_list.html', {'meres': meres})
 
 def orientations(request):
     
